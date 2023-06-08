@@ -1,0 +1,37 @@
+body{
+    font-family: Arial, sans-serif;
+    background: url("banking.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  p
+  {
+    color: rgb(0, 195, 255);
+    float: left;
+    max-width: 45%;
+    padding: 25px;
+    line-height: 2em;
+  }
+  h1{
+    color: rgb(0, 195, 255);
+    text-shadow: 1px 1px white;
+    text-align: center;
+  }
+  ul.navbar li a {
+    display: block;
+    /* color: white; */
+    color: rgb(0, 195, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: 520;
+    font-size: 5mm;
+  }
+
+  ul.navbar li a:hover {
+    background-color: rgba(0, 0, 0, 0.623);
+    color: rgb(0, 195, 255);
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: 1px 1px white;
+  }

@@ -1,0 +1,83 @@
+ /* Add some basic CSS styles here */
+ body{
+    font-family: Arial, sans-serif;
+    background: url("banking.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  ul.navbar li {
+    float: left;
+    padding-left: 15px;
+  }
+
+  ul.navbar li a {
+    display: block;
+    color: rgb(0, 195, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: 520;
+    font-size: 5mm;
+    border-radius: 30px;
+    box-shadow: 1px 1px white;
+    
+  }
+  ul.link li{
+    padding: 1em 0;
+  }
+  ul.link li a
+  {
+    color: rgb(0, 195, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: 520;
+    font-size: 5mm;
+    border-radius: 30px;
+    box-shadow: 1px 1px white;
+  }
+
+  ul li a:hover
+   {
+    box-shadow: 2px 3px whitesmoke;
+    text-transform: uppercase;
+    text-shadow: 1px 1px;
+    
+  }
+ 
+  table {
+    border-collapse: collapse;
+  }
+  table, th, td {
+    border: 1px solid black;
+    padding: 8px;
+  }
+  h1{
+    color: rgb(0, 195, 255);
+    text-shadow: 1px 1px white;
+    text-align: center;
+    font-size: 0.9cm;
+  }
+  p
+  {
+    color: whitesmoke;
+    padding: 20px;
+    font-weight: 530;
+    max-width: 45%;
+    margin: 4em 5px;
+    font-size: 5mm;
+    text-shadow: 1px 1px rgb(0, 195, 255);
+  }
+  span{
+    color: rgb(0, 195, 255);
+    font-weight: 600;
+  }
+  
+ 
