@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Donate Fund</title>
+  <link rel="stylesheet" href="payment2.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Donate Fund</h1>
+
+  <div class="donation-form">
+    <label for="amount">Donation Amount:</label>
+    <input type="number" id="amount" name="amount" placeholder="Enter donation amount" required>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" placeholder="Enter your email" required>
+
+    <button onclick="processPayment()">Donate via PayPal</button>
+  </div>
+  <div id="messageWindow01" class="overlay01">
+    <div class="message-box01">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAA81BMVEX///8cmu////3//v/8//8bmvD///v//v35//////n//f8emu3///j8/v////b8//0Ym/Uemurw////+/b///MXm/YAk/IAlOocm+kAk+0VnfEUnfUAk+j7//oene0klumWze6HxeuAwewamfgAkt/T7PUAj+kAj+LL7voAlPff+P7E5PSm1O6UyOy02vB0ueo1mtppqtxYsua/6fUineRkuOZVp+M2peX//erZ+Pvf8fygy++y2/W63u9JoNiHxORUpOSay+SFxfFqse4eldhIr/DD4Ph3v+ISitdjufFLrOBftd6v0/Ack9JxsN08pt6CzfBg4FZJAAAShElEQVR4nO1dC1fbSNKVWv2S2pK6Jbf1QjbQMn5gHgHH2czEQGaYSSYz3+z+/1/ztZxdwATHMphImXAPJ4dDgizddFfdqq4qGcYLXvCCF7zgBS94wQteUAGOBXIbAwjrvpEGgfq557UwIHXfSHNAbIwxMQABdd9Jg0AMSCEkGBsvKwVjSIlt0PHhZHdvb+9ocjimerFY2LMs44c0LsSnOLSD45O4KKKEc5QkncHp/rugHQaOBcGPuJMsF4D+iRgpJDlizNTopiZKxEkfa8bwD7iPLGwPXx0kiEkpBEOo5EQqKZEa7Zz1KfkRNw8JPgxQJjMmFktkASFEN83SlA8+BPgH2juU2oblu63hdLE0TFTihhUTmeU2Esn0HDu279R9t98GQDsb6ND3H7m5GlMkP+7mYeD/GIsFQBqGdD/OJFvNSSqkGrwOQvqDGBUXtoO/k3SafmWd8BglqTyjbt03+21AXOzvR4J1u1/hxOxKpQ3La6rDwx/AARHfv9xBX+PjMxjXpOxry2PRum/52QG9485XLMktJOuqaGL40Kv7lp8dYDzgosI6MWUmIjE49/J/+t6xDDpTJquyUFKutHJ5E7T/KYYWQmADSkNMAbYxBqUqtZyQYm+S6CetwgkzOULZ6MhyXVdf43P4o78BBGMX+vn3Jl0AIIRQr03yoH9c5gF2J/N+4EP/X2+LKvvmBrEqfrI97AfDeZlPOPr53eE40JRj/N1lKikkBLaC45NptBOhHmMM8cHgzf58/CHZhBIz7aLXb8/33+wcJB2leBLtJNHp3+/GPnGsuh9yQ5AwDOa/9jrK7HYF4xpmzLgadYTINuJExr246KBSr/BeT3EW6yBRdnbO5rn9/SQTCLYMDOhk2kmYQJlWGYKV4Fw/Fkq7X5OvXwJlKu119SoT+iooQ6in+ZUcqZ03E4p9Yuk92nxuSjviDy8StZHd2BgIJVdDj/gt43tI4lI7vzyQ/Gth73YgB5dBblPnO0go5MEs4qiXPDcpKJHR1ZiA7yGfMD5lKSrTiM/MiakyMYrHxGq2pgOYhv2pMoUWXGaloOYJ0OswM7M3Y+Jh226uWIE0HIvoucm4AzZNTschpbhV96OvBAD51fPb1rucxJm6CIAP7boffSVCvK+m35ITJLsy+gD+5Tc4xzLvxJtpsieCCZWKg3kbNJITAvVX8EZLzG/JyQLoNMj9Jgo3gCEB73fSbLN4ZhvIdt5jXPfzPwTQomEwlQJ9+3ViyuugkZzAFiGTBImvndo8ExDrTPy6n/8hwNDPrzJm8m/PicnUVd5Ee2K0QL/37elYIOE7/SZyYuXgPavBlpSQ3Hxf9/M/CGr/Vg8jOhiU2azux38IEOZJpXT8s3DCB7SBuSUI+h3xTWOdJURD4udNE7MQzxNWIyfHWEeCdZNwH94uqkOv/Y+Ty5bVOEpg+xczq4sTZKJ9r3nnPZZ3Yta3dUz0B26gkbX3ozr3zq8EN6/K2N43Xzi5h5KT2igxoz+MBnJS+p36OEl+AaRxnLh4op5Bn0gTKWEiua6KJ9m1LdC4JAo45L3tc5JMeZoIYa5LaSZzbFlN8zuEjIve9vOOUha/DSQXa2wVivoAwKYpFALhNXqGvTPap+8HSqzZOllEKaZNO0zHEPy5XRurTUiKOn9Ynj3pMcG5XBV2azOGfrMhad46ce3JdpeJ3jFpNAts6tPja4l6Uq44OkKyl+warts0c2I4rv3TYKv5E6kXwEUQYuiC1u9FtyuQevj6UrCdIc5z0ri9Q4IPaKvlFXGcnY4NH+KW6+DhdZaKFZfngosPP1HSvOKciUjENikxhaYkJBDbBmkFuF+gVZwwIYUcHNGm9CcvurYcxxvPkgxVKo+uBsaVuu47PtBO3tAPS/D4VDEmsocMLUPlGc90iEnYhDPSRdcWseebVQKvxYjHvBiSnNy4ktAbX3U4M7OHeWexlB8nFNgNWCuaEjsEewfbTSehUU8Wh6Tt35ZlYd8LXvXQyu6FsgY32ctpCGr3yBYk7eB1JOIVPuGRnHA2eIexb90W1QMKQ/p6ddyjtJti/Cx3669uIxYOTnZYhrZmX5HJTJF2JrZ2JLR9w4kNDYe+5is/Ry8TFLPkLNChYN02hYD9znb3jYhTsXNE8HLK2aehf7LG12tzg15DO/drruSydztbtiVCoGgvD+nyg7kE7CXo60VQi86wS0hAvZ1h5PCAVeraqgwd2PTOcmq0ljlxwt1kuuaDdDTQE8XcJrUefpFgqm9kq5IeSfV33vYJuHdcMxlkX+00NReiJuV8+jasT9C6btB6nSC0tepgFqeMdc1ZQOHSHCFKfW/+cWVcfPv7JkecR3949fkeCIzhx63umy4TjL95e88c2L7bOr/uptXWI0ODw/qEG7SNT9tND+jIRemlD8Ilb+q3yLDIOKt2RK8t9LQ+e+Iah53tciLMUTHWJnJ5ApdrvC0kkqhaupeZsjOvrc/Jon+Oqj8uk9rJmittAmNlO6ks+qF194G0AKPO+BQpwdJqZguZXP0KtOuuhRZ/PKhuTXpmOu1qZtgKIRrr4Jbz4txYDldsP8fBRdbb7OxoMKYwr+VkA5e1n1VvU6axMvVKWFXzlmmy9KK3vWU/6ru5+0mqeLPy7OTnNqW1GNp8plZE7g9AMCUmhZKrnIeOeNXBxKBWvvQZjk3+7LBeV21iuJi68iitY++Q4IBvUEnO43mrX8iV60RkB7uG4/jL1b8O2I9MlKrNSuXQwdio51DwcBTF1dwjS7uymBMAhoWMtYJY3nHlySfiqrNX9oDeocRyDOrtRVxb3w0rkVlnWNM0jL9GSVxpm7MsZoM5tbFjDwvOvtg+i5bhzsm9JdLyoUN2I/mILARTE9iqxe/sqYqF091UDeY62scEt/VK+cKmMDXinVc6yFm6vPaneHKgFf3mGojJy5raSU9GQlXjRAyODewHPqZYb5+yh3LpCZDivVnQvpcdsBwyL0qxvzkngp/Y9fid2ai7ttm8lGIs25kbLrF9z8aWVdoUZt49E0c8My+CkN4ZskUMYLj4MMr0KnlEVwNDv9XEyW9K8HV+J045S4v5HdtpGcMCld22N4uFxb03bzVbdy7dAn5uD6/TRxYqaE5gPXtnpthaKaWfKt6ZEy+/kWIW8bShReLWKTOz+DIUhnh8LUfdR6Yh0AzUok+MM5muXdfa40THRu7Dm1CVQKxJuSvesqLv3auBzoP2+JSPHputYujMq+f065Kv1w0MFXOHYOrfNEWXjYNGv7jtB8sG57jlLoc5Pg6upN5hjx6OsdeuJ18wUebaUscemg7bxLH8G1lJMLEMrVMUQ1q8xZLv/E4IuLUmxHGwRYJPqiw/kY/kJHsP6omLDzs9c50RTKX8vyGm9/MZxC69j46SU9F5d0+FO25O/DMWPyGjyZJDp5YUChl/XC8dtBFGvaEdWst740a8jQbvgb30d5YLbePvJH184wsyWTGuqdCczhRfJ7xlHCuz6GuZvvSrFrXL7YPEwS/evdNMgm16OZrGj902JdILXFOTBtjrrOUkkzzriWJok6VkkWMRYmtDm+xj9+7gXP1vHB/+jHj6+BZ/lJroPyGtZ3Qm6R9U05gsK4Zt5972MUCrv/Nq+UeO47o+OT54rCxZfFgaZ4OhbdczEpHgWbV4J+uk10MKw3ukOE7/Xl2eY0Efzweq2mUfBmexvKKhX1NRtXd8UO02YyTjYRsuj5mzHMu5dzjlwrZ3OMjY6Am2RAmRvNMasJ7xba7vn5bOYe0DSKEDuevhfTuLc4fe66n3vfMiZb2n2Fdp8in1fbueigvqt48HImPxutvMZGb20unQtpZWCraN23kUFOJyGtO4KHNuTzlcZKgzwbCufgQtR+lMa4xKLiLN5PUwhCtlAzR0SOSNp09uoIvNT0H4TXm4C+zD1jBBZqWq2K6p5HToh8aKcjMMKdZBjnpyzX466Pv1ceLngWdPRtWOo7gQKi36eFVRPKA4DP4txVPr4tBgl9Q4RpW2IXHsk4WTWEcMU4p1My3e7jvkEuV+0tEyfVWk8qk9QNFJC5B66/yIF8xYlpqq0v8vSoth6wvxhttAU+LAk6SCD/sqGIo+1d+gjykNZilP40op/K7Shha499wkAY5j4/wyeer8FB0RXAR1Fz2WWraVBxdC8nV1VQswUZLS9u+vFMch/vsie4p8XXDS+fe4AeOHoY0pCf48UJU4UYJxLfPhPU4wdoLJQJlP44SZB7PAa8JgJW3iLZseDWTK1he2Sb26e0yLN+PufyfAZZCD+GPVK+M8Zt2eOtinIWzVX1u+ALWM+bXUhnadzyg5SzNeirc70Z/jgPOPT2j9QYjHKVLxHJBm8FHCIiEO9qNq9RApK20KDG/vn+Bh8ZQIJ+kKno7+Duwm9TQR7PuADmeyCimIiZEWbza94QSMp08q10cxQhfn3hcBZa2wiIdd4r0dVOFEavGGRDy8LewNYhRXMtErIGIl+sS3nfrd8F0Qwza8v5IqR5mLGmOmbQouxZuDSXAaPYEQjWQUR38BDGED+pmWgF3w99rT4xtkQhZDTLV4g37FZN1XoL34Wdn03bR5BQQa0+p5j5grND1vA8c2XrGnciKQUkUASOPmKVn0p4Pq/pRzVm4f6ND90arq0MroMsl2xn7zODFofwOzoETKRVz0wVGC1p6HrAVD8Y4WJ42zJxY4jqpVty2eolSfIhMfqrzZqwJQtNsy6m7v+gKWv6uqc7LgZZrxrb0sAe2FRl3HFythgb1qceAtpOp2t9XqEp1g4jdJs5WwjJNNq4qU2t6Qc/SrFtNNM7Iu3B91N90J22uaQzPoNm6eEjQewcn2EP3hG43jxMCXo81s7FaBTrDROB1r2O8763pdn5ESdOk1bz6bgecVq++3DsYyFk08YjWNE4j7O7XN1M3EwdD2rabtHUKCjzVxwnmcdQLHh03TJ4CCf6+tgnwmTlTMp4YDjfqPu5YBaPs/NQ3BRJqTy+W6uGbAhu2yxqAOJKN45xwbTbOw2sa6OZ0++6veHgSX0ZsGHIl+CZj77d3N3q+6LaBY7jaREsPKiRcUtVgUxIoaK5O+ApITauxH6zt6tgrGUGrKzqVf/2SpFSBlOdq3fcdZN+vGavpTczkxwHEnXlsFuU0g2RUsOnbCpkmTW7j27DHtwE/hJFZqhtu4cdrkBjkJptXHfzwZ2ppILk8D12veKxBu4LnOcMAQf0oPQWUIrqQ0eTEMDdK894fcIKdOeD7ooe1O4loBKbtdU0aHreYUnTwED1qYHA4e0zq+MZhE3TQtDnEjyrVWw7YhdcM+2/J03YeRCpmcDtv1DqhbD2h7OMRW8GoRDQoTLV5TtNhIbDEwCbENK2DLOaAo43f0MdeqUF8rM2W6Mxsb2G/eyOUvQEIA/cl1otKU87LH4vMZefkNk8rccBBinAqB+F1ONCOiy4Rgo+KYNleqLUNvbweP9wYdJeKylvG/9lZTInpSbthjsKBEloNQ//cTKXmGTMV7e2Mn/F44odByXNsLjkSiKUj/W4qvVwuXSh1km+UTmJAyUQm6LbFmKcrkqHsUtIkDm79tPgMawCaUWjg4/CWODjQTHPFIdZIiPjsafkrXDDy9t06Ymg2PZqKTJFEUIcQTflBc/XKYt30/z+vpDX0cQMlM2bllBIeTo/2Ts9ev93bn/YASp1/0JK9uaFNzZxjaMOgf/7x3cvbHyd7RX4fBotAEEp827k0qlQCwRsvzPJ9S0vIcC7yO4g3GEPD4AywfnJTX8aGBW6DBOr4atF4BmGr4Ldv2PeKGb6fduPpYNx4HziJfRKlrAdDAorXNgW0AKdHAto0BwW7eOo+qS380+B18foUM1tehuIHv7NocsOxDKzmB2rxg0ia5074c8YVrXseH/kr2W47zWahC3/chrH8o+XOAeMEZS7N0bek06mbJ2T9gq1QApiD/hFC8tkaJZaqZRxTbB8xDMJ4m6yd7s850XM+wm28OmBOXBBeddVMtUXQR/CONx0OAhmOFwetRMu0+NCS0jJ1THfQNToLQDX8UUjSoQSY9Fpvqy0qE8l1mXSGT92BVy/o/FA5te/1ZoqZfpg60j9Yr5VXfaOTR3jNCBz6kTecXUfbFaSpDMpoeB/g7SBVtFy5oEZe26LvpzuKtx/8VcItMXHFxHEBS59CBukA+/wH7e28GiZTK7DIz4oNitjfMG9Xs+O3hhlqtHO/u/3p1dfXrye58DO0wrHkGQ91wLGo4Hv48dI+UY3N8SuEP5IEfgAccB0KCQ+z7lv7O0LaV5Pn6X/wHA0L78ysxdQBtWTpyhuV4oR/PvL7gBS94wQte8IIXvOAFT8X/A9ijlYZHKvRYAAAAAElFTkSuQmCC" alt="done" class="done">
+      <h2 class="s">Success!!!</h2>
+      <p id="inv"></p>
+    </div>
+  </div>
+
+  <script>
+    function processPayment() {
+      var amount = document.getElementById('amount').value;
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+
+      // Validate the input fields here (e.g., check for non-empty values)
+      if (amount=="" || name=="" || email =="")
+      {
+        alert('Fill Inputs')
+      }
+
+      // Redirect to PayPal with the donation details
+      //var paypalUrl = 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=sundarapandi1707@gmail.com&currency_code=USD&amount=' + amount + '&item_name=Donation%20from%20' + encodeURIComponent(name) + '&email=' + encodeURIComponent(email);
+      //window.location.href = paypalUrl; 
+      if(amount>0)
+      {
+    if (amount > 0) {
+      var invoice = document.getElementById('messageWindow01');
+      var p=document.getElementById('inv');
+      var msg = "Thank you for your generous donation.\nYour support will make a significant impact.<br>Name: " + name + "<br>Email: " + email + "<br>Donation Amount:Rs." + amount;
+      p.innerHTML=msg;
+      invoice.style.display = 'flex';
+      setTimeout(function(){
+        window.location.href = "index.html";
+      },5000);
+      } else {
+      alert('Donate at least Rs.1 😒');
+    }
+  }
+}
+  </script>
+</body>
+</html>
