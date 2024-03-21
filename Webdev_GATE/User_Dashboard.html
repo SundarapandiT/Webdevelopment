@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User Profile - Gate Blueprint.com</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
   <header>
     <nav class="navbar">
       <div class="navbar-left">
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> <!-- Three-bar icon for menu toggle -->
         <a href="#" class="navbar-brand">Gate Blueprint.com</a>
       </div>
       <div class="navbar-right">
@@ -23,27 +24,25 @@
     </nav>
   </header>
 
+  <!-- Slide-in menu -->
+  <div class="slide-menu" id="slideMenu">
+    <div class="menu-content">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="editprofile.html">Profile Information</a></li>
+      </ul>
+    </div>
+  </div>
+
   <div class="container">
     <div class="profile">
         <div class="profile-data">
           <h2>Profile Information</h2>
           <div class="profile-info">
-            <!-- <?php
-            // Assuming $profileData is an associative array containing profile information fetched from the database
-            // Example: $profileData = array("name" => "John Doe", "discipline" => "Computer Science (CS)", "email" => "john.doe@example.com");
-      
-            // Output profile information
-            echo "<p><strong>Name:</strong> " . $profileData['name'] . "</p>";
-            echo "<p><strong>GATE Discipline:</strong> " . $profileData['discipline'] . "</p>";
-            echo "<p><strong>Email:</strong> " . $profileData['email'] . "</p>";
-            ?> -->
+            <!-- Profile information -->
             <p><strong>Name:</strong> John Doe</p>
             <p><strong>GATE Discipline:</strong> Computer Science (CS)</p>
             <p><strong>Email:</strong> john.doe@example.com</p>
-          </div>
-          <div class="edit-profile">
-            <h2>Edit Profile</h2>
-            <a href="editprofile.html">Edit Profile</a>
           </div>
         </div>
       
@@ -89,5 +88,24 @@
       </div><!-- Footer content -->
 
   </footer>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("slideMenu");
+      if (menu.style.left === "0px") {
+        menu.style.left = "-250px";
+      } else {
+        menu.style.left = "0px";
+      }
+    }
+
+    // Hide the menu when clicking anywhere on the body
+    document.addEventListener("click", function(event) {
+      var menu = document.getElementById("slideMenu");
+      if (event.target.closest(".navbar-left") === null && event.target.closest(".slide-menu") === null && menu.style.left === "0px") {
+        menu.style.left = "-250px";
+      }
+    });
+  </script>
 </body>
 </html>
