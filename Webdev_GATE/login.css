@@ -1,15 +1,17 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #9de05e;
+    max-width: 360px;
+    margin: 150px auto;
+    background:url("Gate\ \(1\).png")no-repeat center rgb(3, 46, 3);
+    backdrop-filter: brightness(30%);
 }
 
 .form {
-    background-color: #fff;
+    
+   background-color: #cccccc52;
     max-width: 360px;
-    margin: 100px auto;
-    padding: 20px;
+    margin: 150px auto;
+    padding: 30px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -17,6 +19,9 @@ body {
 h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: #e65512;
+    font-weight: 600;
+    text-shadow: 1px 1px black;
 }
 
 input[type="email"],
@@ -31,9 +36,10 @@ button[type="submit"] {
 }
 
 button[type="submit"] {
-    background-color: #4caf50;
+    background-color: #0b640e;
     color: white;
     cursor: pointer;
+    font-weight: 600;
 }
 
 button[type="submit"]:hover {
@@ -42,11 +48,14 @@ button[type="submit"]:hover {
 
 .signup {
     text-align: center;
+    color: rgb(249, 255, 255);
+    text-shadow: 1px 1px black;
 }
 
 .signup a {
-    color: #007bff;
-    text-decoration: none;
+    color: #ca4260;
+    text-decoration: underline;
+    text-shadow: 1px 1px black;
 }
 
 .signup a:hover {
