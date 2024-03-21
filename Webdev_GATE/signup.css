@@ -4,7 +4,19 @@ body {
     padding: 0;
     background-color: #78c3ee;
 }
-
+span
+{
+    font-weight: 600;
+    font-size: large;
+    padding: 10px;
+   
+}
+img
+{
+    border-radius: 30%;
+    width: 40px;
+    height: 40px;
+}
 .form {
     background-color: #fff;
     max-width: 360px;
