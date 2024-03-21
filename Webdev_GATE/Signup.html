@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="signup.css">
 </head>
 <body>
-    <form class="form" action="newReg.php" method="post">
+    <form class="form">
         <img src="Gate (2).png" alt="logo"><span>Gate Blueprint</span>
         <h2>Register</h2>
         <input type="text" name="full_name" placeholder="Full Name" required>
@@ -17,8 +17,29 @@
         <input type="text" name="gate_eligibility" placeholder="GATE Eligibility" required>
         <input type="text" name="qualification" placeholder="Qualification" required>
         <input type="text" name="college" placeholder="College/University" required>
-        <button type="submit" name="register">Register</button>
+        <button type="button" id="registerBtn">Register</button>
         <p class="signup">Already have an account? <a href="Login.html">Login</a></p>
     </form>
+
+    <!-- Import Firebase configuration -->
+    <script type="module" src="firebase-config.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+
+        // Import Firebase configuration
+        import { firebaseConfig } from './firebase-config.js';
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    </script>
+
+    <!-- Your JavaScript to handle form submission and Firebase interaction -->
+    <script type="module">
+        import { handleFormSubmit } from './newreg.js';
+
+        document.getElementById('registerBtn').addEventListener('click', handleFormSubmit);
+    </script>
 </body>
 </html>

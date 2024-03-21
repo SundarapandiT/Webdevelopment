@@ -7,13 +7,34 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <form class="form" action="login_validation.php" method="post">
+    <form class="form">
         <h2>Login</h2>
         <input type="email" name="email" placeholder="Email" required>
         <input type="password" name="password" placeholder="Password" required>
         <button type="submit" name="login">Login</button><br><br><br>
         <p class="signup">Don't have an account? <a href="Signup.html">Sign up</a></p>
-      </form>
+    </form>
+
+    <!-- Import Firebase configuration -->
+    <script type="module" src="firebase-config.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+
+        // Import Firebase configuration
+        import { firebaseConfig } from './firebase-config.js';
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    </script>
+
+    <!-- Your JavaScript to handle login functionality -->
+    <script type="module" src="login.js"></script>
+    <script type="module">
+        import { handleFormSubmit } from './login.js';
+
+        document.querySelector('.form').addEventListener('submit', handleFormSubmit);
+    </script>
 </body>
 </html>
-  

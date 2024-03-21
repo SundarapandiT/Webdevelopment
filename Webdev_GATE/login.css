@@ -2,13 +2,13 @@ body {
     font-family: Arial, sans-serif;
     max-width: 360px;
     margin: 150px auto;
-    background:url("Gate\ \(1\).png")no-repeat center rgb(3, 46, 3);
+    background:url("Gate\ \(1\).png")no-repeat center rgb(5, 27, 5);
     backdrop-filter: brightness(30%);
 }
 
 .form {
     
-   background-color: #cccccc52;
+   background-color: #94e99152;
     max-width: 360px;
     margin: 150px auto;
     padding: 30px;
