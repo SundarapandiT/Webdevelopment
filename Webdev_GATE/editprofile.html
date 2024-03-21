@@ -1,38 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edit Profile - Gate Blueprint.com</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile - GATE Prep</title>
+    <link rel="stylesheet" href="signup.css">
 </head>
 <body>
-  <header>
-    <h1>Edit Profile</h1>
-  </header>
-
-  <div class="container">
-    <form action="update-profile.php" method="post">
-      <!-- Edit profile form fields -->
-      <label for="edit-name">Name:</label>
-      <input type="text" id="edit-name" name="edit-name" value="John Doe" required>
-      <br>
-      <label for="edit-discipline">GATE Discipline:</label>
-      <select id="edit-discipline" name="edit-discipline" required>
-        <option value="CS">Computer Science (CS)</option>
-        <option value="EE">Electrical Engineering (EE)</option>
-      </select>
-      <br>
-      <label for="edit-email">Email:</label>
-      <input type="email" id="edit-email" name="edit-email" value="john.doe@example.com">
-      <br>
-      <button type="submit">Save Changes</button>
+    <form class="form" action="updateProfile.php" method="post">
+        <h2>Edit Profile</h2>
+        <input type="text" name="full_name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="New Password">
+        <input type="password" name="confirm_password" placeholder="Confirm New Password">
+        <input type="text" name="gate_eligibility" placeholder="GATE Eligibility" required>
+        <input type="text" name="qualification" placeholder="Qualification" required>
+        <input type="text" name="college" placeholder="College/University" required>
+        <button type="submit" name="update">Update</button>
     </form>
-    </form>
-  </div>
-
-  <footer>
-    <!-- Footer content -->
-  </footer>
 </body>
 </html>
