@@ -131,11 +131,12 @@ body {
   }
   
   .material-item a {
-    background-color:rgb(27, 26, 85);
+    background-color:#4657b4;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
+    border: 2px solid rgb(14, 13, 73);
   }
   
   .material-item a:hover {
