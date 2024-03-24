@@ -177,4 +177,9 @@
     text-align: center;
     padding: 20px 0;
   }
-  
+  .footer-content
+  {
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+  }
