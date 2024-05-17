@@ -1,0 +1,90 @@
+
+/* Basic styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("projectManagement-Bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header styles */
+  .header {
+    /* background-color: #fff; */
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60vh;
+  }
+  
+  .logo {
+    font-size: 5em;
+    font-weight: bold;
+    color: #000;
+  }
+  .logo b{
+    color: rgb(10, 161, 10);
+  }
+  
+  .auth {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .signup,
+  .login {
+    padding: 15px 30px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: large;
+  }
+  .signup
+  {
+    background-color: rgb(45, 15, 72);
+  }
+  
+  .login
+  {
+    background-color: rgb(17, 132, 5);
+  }
+  /* Main styles */
+  .main {
+    background-color: #f5f5f5;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    color: #333;
+    margin: 0;
+  }
+  
+  /* Footer styles */
+  .footer {
+    background-color: #f0f0f0;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .owner {
+    color: #aaa;
+  }
+  
